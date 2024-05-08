@@ -8,7 +8,7 @@ console.log(3
 )  //not a good code readbility 
 
 let Name="Sangam" //string 
-let RollNo="1900330100049" //number 
+let RollNo=1900330100049 //number 
 let bool=true  //booleen
 
 //bigint for big integers values 
@@ -17,6 +17,7 @@ let bool=true  //booleen
 
 console.log(typeof(null))  //typeof tell types of variables null is object type 
 console.log(typeof(undefined)) //undefined type
+console.log(typeof(RollNo))
 
 
 
