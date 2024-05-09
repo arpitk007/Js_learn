@@ -9,6 +9,7 @@ console.log(typeof(String(score)))  //33 easily change into string
 
 let bool=true
 console.log(typeof(String(bool)))  // boolean easily change into string outpout come boolen type like true and false
+console.log(Number(bool))  //it give 1 and 0 for num
 console.log(bool)
 
 let Count=0
@@ -29,6 +30,7 @@ number
 NaN
 string
 string
+1
 true
 false
 null
