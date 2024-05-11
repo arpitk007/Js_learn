@@ -1,7 +1,7 @@
 let myName="arpit" //simple decelration of string
 let repoCount=10
 
-let finalString=(myName+repoCount+"Coder")  //not a goode way or old way
+let finalString=(myName+repoCount+"Coder")  //not a good way or old way
 
 console.log(finalString)
 
