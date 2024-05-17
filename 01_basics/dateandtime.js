@@ -14,4 +14,21 @@ console.log(myNewdate2.toLocaleString())
 console.log(myNewdate.toDateString())
 console.log(myNewdate1.toLocaleString())   //it will give whole input from fetching the whole database
 
+//************Timestamp..........................//
+let myTimeStamp=Date.now()   //it will give how much time it will take to fetch in miliseconds
+console.log(myTimeStamp)
+console.log(myNewdate.getTime())  //it will give the time 
+console.log(Math.floor(myTimeStamp/1000)) //it will give readable seconds
+
+let newDate=new Date()
+console.log(newDate.getDate())
+console.log(newDate.getMonth()+1) //+ 1 esliye kyuki js me month 0 se chalu hota hain
+
+let text=`Monday ${newDate.getDate()} is today`
+console.log(text)
+
+newDate.toLocaleString("default",{       //it work like a object where i can give other values like weekday
+    weekday:"long"
+})
+console.log(newDate)
 
