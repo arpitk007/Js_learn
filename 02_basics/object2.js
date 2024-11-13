@@ -53,4 +53,39 @@ users[1].email
 // console.log(Object.entries(tinderUser));  jo key vaalue hoti hain use arrayme daal deta hain
  console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
+// Defining an object `course` with properties: coursename, price, and courseInstructor
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+};
+
+// Accessing the `courseInstructor` property directly from the `course` object
+// course.courseInstructor  // This would directly output "hitesh"
+
+// Using object destructuring to create a new variable `instructor`
+// and assigning it the value of `courseInstructor` from the `course` object
+const {courseInstructor: instructor} = course;
+
+// Trying to log `courseInstructor` directly would result in an error because it’s not defined as a standalone variable
+// console.log(courseInstructor); // This line would throw an error
+
+// Logging the `instructor` variable, which holds the value "hitesh" from the `courseInstructor` property of `course`
+console.log(instructor); // Output: "hitesh"
+
+// Example JSON-like object to represent course details
+{
+    "name": "Sangam",
+    "coursename": "js in hindi",
+    "price": "free"
+}
+
+// Example of an array with multiple empty objects, often used as placeholders or to represent an empty structure
+[
+    {},  // First empty object
+    {},  // Second empty object
+    {}   // Third empty object
+]
+
+
 
