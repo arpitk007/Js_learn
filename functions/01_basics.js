@@ -89,5 +89,5 @@ function returnSecondValue(getArray) {
     return getArray[1];
 }
 
-console.log(returnSecondValue(myNewArray)); // Logs second element: 400
+console.log(returnSecondValue(myNewArray));   // Logs second element: 400
 console.log(returnSecondValue([200, 400, 500, 1000])); // also we can take direct array like this
