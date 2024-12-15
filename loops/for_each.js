@@ -7,7 +7,7 @@ coding.forEach( function (item) {           //foreach loop callback function ka 
 
 //foreach using arrow function
 coding.forEach( (item) => {
-    //console.log(item)
+    //console.log(item)                         
 })
 
 //function ko print karna using for each
