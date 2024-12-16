@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility mode in older versions of IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the webpage is responsive on all devices -->
+    <title>NodeList Creation </title> <!-- Title of the webpage displayed in the browser tab -->
+</head>
+<body style="background-color: #212121; color: #fff;"> <!-- Sets the background color and text color for the body -->
+    
+</body>
+<script>
+    // Create a new <div> element dynamically
+    const div = document.createElement('div')
+    console.log(div); // Logs the newly created div to the console for debugging purposes
+
+    // Assign a class name to the div
+    div.className = "main"
+
+    // Assign a unique ID to the div, generated randomly between 1 and 11
+    div.id = Math.round(Math.random() * 10 + 1)
+
+    // Set a "title" attribute with a specific value to the div
+    div.setAttribute("title", "generated title")
+
+    // Apply inline styles to the div
+    div.style.backgroundColor = "green" // Sets the background color of the div to green
+    div.style.padding = "12px" // Adds padding inside the div
+
+    // Create a text node containing the text "Chai aur code"
+    const addText = document.createTextNode("I am a Genius")
+
+    // Append the text node as a child to the div
+    div.appendChild(addText)
+
+    // Append the div element to the body of the document
+    document.body.appendChild(div)
+</script>
+</html>
