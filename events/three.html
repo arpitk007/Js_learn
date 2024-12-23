@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Main heading for the webpage -->
+    <h1>Chai aur Javascript</h1>
+    <!-- Button to start the action (not functional in this version) -->
+    <button id="start">Start</button>
+    <!-- Button to stop the action (not functional in this version) -->
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Function to log a custom string and the current timestamp
+    const sayDate = function(str) {
+        console.log(str, Date.now()); // Logs the passed string and the current time in milliseconds
+    };
+
+    // Sets an interval to call sayDate every 1000ms (1 second), passing "hi" as the argument
+    const intervalId = setInterval(sayDate, 1000, "hi");
+
+    // Immediately clears the interval, so the setInterval never actually executes
+    clearInterval(intervalId);
+</script>
+</html>

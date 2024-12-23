@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Main heading of the webpage -->
+    <h1>Chai aur code</h1>
+    <!-- Button to stop the timeout -->
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Function to log "Arpit" to the console (currently unused)
+    const sayMyName = function() {
+        console.log("Arpit");
+    };
+
+    // Function to change the text of the <h1> element
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "best JS series"; // Updates <h1> content
+    };
+
+    // Sets a timer to execute the changeText function after 2000ms (2 seconds)
+    const changeMe = setTimeout(changeText, 2000);
+
+    // Event listener for the "Stop" button
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(changeMe); // Cancels the scheduled setTimeout
+        console.log("STOPPED"); // Logs "STOPPED" to the console
+    });
+</script>
+</html>
