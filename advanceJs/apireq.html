@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REQ</title>
+    <style>
+        body {
+            background-color: #2f2f2f;
+            color: aliceblue;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: #444;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            width: 300px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body style="background-color: #2f2f2f; color: aliceblue;">
+
+   <p> 0	UNSENT	Client has been created. open() not called yet.</p>
+   <p> 1	OPENED	open() has been called.</p>
+   <p> 2	HEADERS_RECEIVED	send() has been called, and headers and status are available.</p>
+   <p> 3	LOADING	Downloading; responseText holds partial data.</p>
+   <p> 4	DONE	The operation is complete.</p>
+   <div class="card">
+    <img src="" alt="Avatar" id="avatar">
+    <div class="container">
+      <h4 id="name"><b></b></h4>
+      <p id="followers">Followers: </p>
+    </div>
+ </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    const avatarElement = document.getElementById('avatar');
+    const nameElement = document.getElementById('name');
+    const followersElement = document.getElementById('followers');
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText) //here we are converting api data in Json 
+            console.log(data)
+            // Update the card with API data
+            avatarElement.src = data.avatar_url;
+            nameElement.textContent = data.name || 'Unknown';
+            followersElement.textContent = `Followers: ${data.followers}`;
+            // console.log(Avatar)
+            // console.log(typeof data);
+            // console.log(data.followers);
+        }
+    }
+    xhr.send();
+     
+</script>
+</html>
