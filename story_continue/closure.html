@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+//lexical scoping
+    <script>
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // function outer(){                          //but parent function can not access child properties
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){                           //child function can access parents properties 
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){                   //Note:siblings can not access each other properties
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+</script>
+
+<!--Closure -->
+<script>
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+        //Note:maan lo 100 buttons hain and hundred color hain tab ham aise kar to nhi sakte hain
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`   //agar aise karege to bas error create honge
+
+            return function(){               //function return karne par uska scope bhi milta hain 
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+        //jiski wajah se ye document.getElementById kaam kar rahi
+        //Note:A closure allows a function to access variables from its outer (enclosing) function even after that function has finished executing.
+</script>
+</html>
