@@ -49,7 +49,7 @@ function addone(num) {
 }
 
 // Function expression - not hoisted, so cannot be called before it's defined
-addTwo(5); // Error: addTwo is not defined at this point
+console.log(addTwo(5)); // Error: addTwo is not defined at this point
 
 const addTwo = function(num) {  //yaha kar raha hain
     return num + 2;

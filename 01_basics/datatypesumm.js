@@ -21,5 +21,5 @@ console.log(typeof(myobj))
 const myfunction=function(){
     console.log("hello Sangam")
 }
-
+console.log(typeof(myfunction()))
 // https://262.ecma-international.org/5.1/#sec-11.4.3
