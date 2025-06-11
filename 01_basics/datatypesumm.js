@@ -19,7 +19,7 @@ let myobj={
 console.log(typeof(myobj))
 
 const myfunction=function(){
-    console.log("hello Sangam")
+    console.log("hello Sangam")  //function is not returning anything that is wwhy it is coming undefined
 }
 console.log(typeof(myfunction()))
 // https://262.ecma-international.org/5.1/#sec-11.4.3
